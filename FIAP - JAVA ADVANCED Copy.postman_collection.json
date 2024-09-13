@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "ac727d94-3133-4cd0-b122-f7a26aae3eb8",
+		"name": "FIAP - JAVA ADVANCED Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6667623"
+	},
+	"item": [
+		{
+			"name": "projetos",
+			"item": [
+				{
+					"name": "GET PROJETOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/projetos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projetos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PROJETOS PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/projetos/paged?size=2&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projetos",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PROJETOS BY UUID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/projetos/a76c12c7-0653-48f6-9790-edf7b3768dde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projetos",
+								"a76c12c7-0653-48f6-9790-edf7b3768dde"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST PROJETOS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"PROJETO TESTE {{$guid}}\",\r\n    \"dataInicio\": \"2024-09-01\",\r\n    \"dataFim\": \"2024-12-31\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/projetos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projetos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
